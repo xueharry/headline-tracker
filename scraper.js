@@ -19,6 +19,20 @@ if (results) {
 baseURL = window.location.toString();
 console.log(baseURL);
 
+var timeToWait = 10000; // in miliseconds.
+var pageNumber = 1;
+
+function loadNewPage() {
+    window.location.replace(baseURL + '&page=' + String(pageNumber));
+    pageNumber += 1;
+ }
+
+setTimeout(function(){ loadNewPage(); }, timeToWait);
+
+
+
+
+
 
 
 
